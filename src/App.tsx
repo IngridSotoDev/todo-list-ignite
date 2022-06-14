@@ -6,6 +6,7 @@ export function App() {
   return (
     <>
       <Header />
+      <Tasks />
     </>
   );
 }

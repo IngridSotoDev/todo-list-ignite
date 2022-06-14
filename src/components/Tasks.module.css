@@ -1,0 +1,82 @@
+.container {
+  margin: auto;
+  margin-top: -1.5rem;
+  max-width: 48rem;
+  padding: 0px 1rem;
+}
+
+.newTask {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 4rem;
+}
+
+.newTask input {
+  flex: 1;
+  background: var(--gray-500);
+  border: 0;
+  padding: 1rem;
+  color: var(--gray-100);
+  border-radius: 8px;
+}
+
+.newTask input::placeholder {
+  color: var(--gray-300);
+}
+
+.newTask button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-weight: 700;
+  color: var(--gray-100);
+  background: var(--blue-800);
+  border: 0;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  cursor: pointer;
+
+  transition: background-color 200ms;
+}
+
+.newTask button:hover {
+  background: var(--blue-500);
+}
+
+.newTask button svg {
+  margin-top: 1px;
+  height: 1rem;
+  width: 1rem;
+}
+
+.tasks header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tasks header div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.createdTasks {
+  color: var(--blue-500);
+}
+
+.completedTasks {
+  color: var(--purple-500);
+}
+
+.tasks header div span {
+  background: var(--gray-400);
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  color: var(--gray-200);
+}

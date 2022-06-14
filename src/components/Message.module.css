@@ -1,0 +1,23 @@
+.message {
+  margin-top: 1.5rem;
+  padding: 4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.message img {
+  height: 3.5rem;
+  width: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.message span {
+  color: var(--gray-300);
+  line-height: 1.4rem;
+  font-weight: 700;
+}
+
+.message span + span {
+  font-weight: 400;
+}
