@@ -1,12 +1,12 @@
 import { Header } from "./components/Header";
-import { Tasks } from "./components/Tasks";
+import { Container } from "./components/Container";
 
 import "./global.css";
 export function App() {
   return (
     <>
       <Header />
-      <Tasks />
+      <Container />
     </>
   );
 }
