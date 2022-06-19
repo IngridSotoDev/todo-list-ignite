@@ -2,9 +2,9 @@ import { useMemo, useState } from "react";
 import { PlusCircle } from "phosphor-react";
 
 import { Message } from "./Message";
-
-import styles from "./Container.module.css";
 import { TodoItem } from "./TodoItem";
+
+import styles from "./Main.module.css";
 
 interface Task {
   id: number;
@@ -12,7 +12,7 @@ interface Task {
   isCompleted: boolean;
 }
 
-export function Container() {
+export function Main() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [descriptionTask, setDescriptionTask] = useState("");
 
@@ -55,7 +55,7 @@ export function Container() {
   }
 
   return (
-    <div className={styles.container}>
+    <main className={styles.content}>
       <div className={styles.newTask}>
         <input
           type="text"
@@ -70,11 +70,12 @@ export function Container() {
         </button>
       </div>
 
-      <div className={styles.tasks}>
+      <section className={styles.tasks}>
         <header>
           <div className={styles.createdTasks}>
             Tarefas criadas <span>{tasks.length}</span>
           </div>
+
           <div className={styles.completedTasks}>
             Concluídas
             <span>
@@ -95,22 +96,11 @@ export function Container() {
                 />
               );
             })}
-
-            {/* 
-          {completedTasks.map((task) => {
-            return (
-              <TodoItem
-                handleTaskMarking={handleTaskMarking}
-                task={task}
-                key={task.description}
-              />
-            );
-          })} */}
           </div>
         ) : (
           <Message />
         )}
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
